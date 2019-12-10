@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            color: black;
+        }
+        textarea{
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            top:60px;
+            left: 210px;
+            text-align: start;
+        }
+        input{
+            position: absolute;
+            top: 380px;
+            left: 210px;
+        }
+    </style>
+</head>
+<body>
+<div id="box" style="width: 700px;height: 100px;margin: 30px auto;"></div>
+<div style="width: 700px;height: 300px;background:url('b06cdaacb3083c5a6dbd221087248ca3 (1).jpg') no-repeat; margin: 50px auto;position: relative; " id="oDiv">
+
+    <textarea id="msg"></textarea>
+    <input type="button" value="提交" id="btn">
+</div>
+<script>
+    var btn=document.getElementById('btn');
+    btn.onclick=click;
+    function click(){
+        var oUl = document.createElement("ul");
+        var oBox = document.getElementById("box");
+        oBox.appendChild(oUl);
+
+        var oBtn = document.getElementById("btn");
+        var oMsg = document.getElementById("msg")
+
+    var oLi = document.createElement("li");
+
+    oLi.innerHTML = oMsg.value + "<span class='close'>X</span>"
+        var olis = document.getElementsByTagName("li");
+        //3.2 如果是第一次添加的li标签，则直接添加到ul的后面
+        if(olis.length == 0){
+            oUl.appendChild(oLi);
+            count++;
+
+        }else{
+            // 3.3 如果不是第一次添加的li标签，则插入到第一个li标签的前面
+            oUl.insertBefore(oLi,olis[0]);
+            count++;
+        }
+        // 4.添加完成之后 清空textarea的值
+        oMsg.value = "";
+
+
+        // 5.点击X的时候删除当前的一条数据
+        //5.1先获取所有的X
+        var oSpans = document.getElementsByTagName("span");
+
+        // 5.2for循环 对所有的X添加点击事件
+        for(var i = 0; i< oSpans.length; i++){
+            oSpans[i].onclick  = function(){
+                // 5.3 移除当前的li标签
+                oUl.removeChild(this.parentNode)
+                count--;
+            }
+        }
+
+
+    }
+    function sum(){
+        alert(count);
+
+    }
+</script>
+</body>
+</html>

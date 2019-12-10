@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+.head{ height:105px; background:#FFF;}
+.head .logo{ float:left; display:block; width:146px; height:77px; background:url(img/1.png) no-repeat center; margin-top:22px;}
+.head .txt{ width:116px; height:60px; background:url(img/1.png) no-repeat center; float:left; margin:30px 0 0 20px;}
+.head .search{ width:409px; height:32px; padding:3px; background:#f7f7f7; float:left; margin:35px 0 0 86px;}
+.head .boxleft{ width:327px; height:30px; border:1px solid #e5e5e5; background:#FFF;}
+.head .label{ display:inline-block; height:30px; float:left; width:225px; border:0; position:relative;}
+.head .label .ipt,.head .label .text{ width:205px; padding:0 10px; height:30px; border:0; outline:none;}
+.head .label .text{ line-height:30px; position:absolute; left:0; top:0; color:#999;}
+.head .btn-search{ width:80px; height:32px; font-size:14px; color:#FFF; text-align:center; float:left; background:#F06;}
+.head .tel{ width:276px; height:49px; background:url(../images/tel.png) no-repeat center; margin-top:25px; float:right;}
+
+/*nav*/
+.nav{ height:40px; background:#333;}
+.nav>ul>li{ float:left; width:108px; height:40px; line-height:40px; text-align:center; position:relative; z-index:10000; font-size:14px}
+.nav>ul>li>a{ display:block; color:#FFF; text-decoration:none;}
+.nav>ul>li:hover,.nav>ul>li.current,.nav>ul>li.case{ background:#131313;}
+.nav>ul>li.on{ background:#f06;}
+.nav>ul>li>a>em{ width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 6px solid #FFF; display:inline-block; vertical-align:middle; margin-left:5px;}
+.nav .slidenav { background:#FFF; position:absolute; background:#FFF; top:100%; left:0; min-width:100%; display:none; }
+.nav li:hover .slidenav{ display:block;} 
+.nav .slidenav li{ height:32px; line-height:32px; text-align:center; white-space:nowrap;}
+.nav .slidenav li a{ display:block; width:100%; text-decoration:none;}
+.nav .slidenav li a:hover{ background:#ff0066; color:#FFF;}
+.foot-contact{ height:300px; background:#e7e7e7; margin-top:40px;}
+.contact-type{ padding-left:50px; float:left; padding-top:20px; color:#999; width:470px;}
+.sut_ul{
+	style="padding:0px 20px 0px; 
+	list-style:none; 
+	float:left; 
+	width:100%;
+}
