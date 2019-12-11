@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册面板</title>
+    <style>
+        input {
+            margin-right: 120px;
+
+
+        }
+        label{
+            padding-right: 50px;
+            margin-left: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div style="width: 1000px;height: 500px;background-color: floralwhite;position: relative;margin: 40px auto;border: 0.5px solid black">
+    <h1 style="text-align: center;">欢迎注册</h1>
+    <form>
+        <div>
+            <label for="user">用户名：&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="user" placeholder="请输入用户名" />
+            用户名以字母开头，可以包含数字和下划线，7-14个字符
+        </div>
+        <div>
+            <label for="password">密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="passwrod" id="password" placeholder="请输入密码..." />
+            密码可以包含字母、数字和下划线，7-14个字符，必须项
+        </div>
+        <div>
+            <label for="password1">确认密码：</label>
+            <input type="确认密码" id="password1" placeholder="请确认密码..." />
+            请再次输入密码确认，两次密码必须相同，必须项
+        </div>
+        <div>
+            <label for="e-mail">电子邮箱：</label>
+            <input type="text" id="e-mail" placeholder="请输入电子邮箱" />
+            电子邮箱由于发送激活链接，必须项，必须填
+        </div>
+        <div>
+            <label for="birth">出生日期：</label>
+            <input type="date" id="birth" placeholder="请输入出生日期" />
+            出生年月，非必需项
+        </div>
+        <div>
+            <label for="byyear">毕业时间：</label>
+            <input type="text" id="byyear" />
+            毕业时间（2000-），非必需项
+        </div>
+        <div>
+            <label for="workyear">工作年限：</label>
+            <input type="number" id="workyear" />
+            工作年限（0-50），非必需项
+        </div>
+        <div>
+            <label for="people">个人主页：</label>
+            <input type="text" id="people" placeholder="http://..." />
+            个人主页地址（http://...），非必需项
+        </div>
+        <div>
+            <input type="reset" value="重置" style="margin-left:50px; "/>
+            <input type="submit" value="提交" />
+        </div>
+    </form>
+
+
+</div>
+
+</body>
+</html>

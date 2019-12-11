@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易计算器</title>
+        <script type="text/javascript" src="js-colonel.js"></script>
+<style>
+    body{background: #004f69}
+    a{text-decoration:none;
+      color:black;
+      }
+    h1{
+       margin:120px ;
+        text-align: center;
+        font-size: 22px;
+    }
+    /*对h1这种文字节点类型（存疑）的一般应该用text-aligncenter 对于div应该用 margin：0 atuo*/
+   #counter{
+       background-color: #009acd;
+       width: 300px;
+       height: 200px;
+       margin: 0 auto;
+     position: relative;
+   }
+    #bg { width: 300px; height: 200px; border: 3px solid #004f69; background: #009acd; filter: alpha(opacity=80); opacity: 0.8;
+        position: absolute;top: 0px }
+    h3{
+        /*padding: 2px;*/
+        /*background: #00779e;*/
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+        border-top:0 ;
+        width: 300px;
+        text-align:
+        center;
+        margin:0 auto;
+      font-weight:bold;
+      display: block;
+        //要是外部得标签超了里面的标签，那么绝对会发生溢出
+    }
+    h3 input{
+        /*border-bottom: 0;*/
+        border:0 ;
+        /*padding-bottom: 0;*/
+        /*padding-top: 0;*/
+        margin:10px auto;
+        width: 223px;
+        padding: 0 10px;
+        /*这里有一个问题，在背景上面加入图片是一个什么逻辑。为什么会被padding撑起来。
+        注意要是图片遇见问题，可以以后将padding熟练使用*/
+        font-weight: bold;
+        height: 30px;
+        text-align: right;
+        background: url("./3522 - 计算器/images/ico.png") no-repeat;
+    }
+    #counter ul{
+        width: 243px;
+        overflow: hidden;
+        padding-left: 0px;
+        margin: 20px auto;
+        /*margin: 0 auto;*/
+    }
+    .clear{
+        clear: both;
+    }
+   #counter  li{
+        display: block;
+        width:60px;
+       margin: 0;
+        height: 30px;
+       float: left;
+       line-height: 30px;
+       /*//要是里面的字体不能正对边框最好的办法就是将行间距设为外部边框的大小*/
+       text-align: center;
+       /*要想要标签自动（成n*n的数列）摆放在一个div中，最好的办法就是进行飘浮*/
+       background: url("./3522 - 计算器/images/ico.png") no-repeat -303px 0;
+       cursor: pointer;
+       /*background:deepskyblue;*/
+
+    }
+
+
+</style>
+
+</head>
+<body>
+<h1>简易计算器-by 闫泽中-<a href="https://www.baidu.com">www.baidu.com</a></h1>
+<!--<第一个问题，a用的是href而且要想访问网址，必须使用https这个作为开头，否则就不会跳转到网站中.第二点，h这个标签可以嵌套a-->
+<div id="counter">
+
+
+<h3><input id="input1" type="text" value="0" /></h3>
+<ul>
+
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>+</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>-</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>×</li>
+        <li>0</li>
+        <li>C</li>
+        <li>=</li>
+        <li>÷</li>
+    <!--<li class="clear"></li>-->
+
+</ul>
+
+    <!--<div id="bg"></div>-->
+
+</div>
+
+</body>
+</html>

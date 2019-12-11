@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .header,.footer{
+            height:40px;
+            width:100%;
+            background:red;
+        }
+        .footer{
+            clear:both;
+        }
+        .container{
+            padding-left:200px;
+            padding-right:300px;
+        }
+        .container div{
+            postion:relative;
+            float:left;
+        }
+        .middle{
+            width:100%;
+            background:yellow;
+        }
+        .left{
+            width:200px;
+            background:pink;
+            margin-left:-100%;
+            right:200px;
+        }
+        .right{
+            width:300px;
+            background:aqua;
+            margin-right:-300px;
+        }
+    </style>
+</head>
+<body>
+<div id="header"></div>
+<div class="header">这里是头部</div>
+<div class="container">
+    <div class="middle">中间部分</div>
+    <div class="left">左边</div>
+    <div class="right">右边</div>
+</div>
+<div class="footer">这里是底部</div>
+</body>
+</html>
