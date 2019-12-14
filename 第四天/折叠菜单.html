@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>折叠菜单</title>
+    <meta charset="utf-8">
+    <style>
+        ul,li{
+            list-style-type:none;
+        }
+        .parent .son{display: none;}
+        .title{
+            background-color: azure;
+            width:201px;
+            font-family: Helvetica;
+        }
+        #daohang{
+            position: absolute;
+            top:200px;
+            left:5%;
+
+        }
+        .parent>.title{
+            float: left;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="daohang">
+    <ul class="parent">
+        <li class="title">
+            <span>阿里巴巴</span>
+            <ul class="son">
+                <li>前端部门</li>
+                <li>后台部门</li>
+                <li>达摩院</li>
+                <li>云计算</li>
+            </ul>
+        </li>
+        <li class="title">
+            <span>腾讯</span>
+            <ul class="son">
+                <li>前端</li>
+                <li>后台</li>
+                <li>云计算</li>
+                <li>社交管理</li>
+
+            </ul>
+        </li>
+        <li class="title">
+            <span>字节跳动</span>
+            <ul class="son">
+                <li>算法开发</li>
+                <li>大数据管理</li>
+                <li>前端技术</li>
+                <li>后台管理</li>
+                <li>内容</li>
+
+            </ul>
+        </li>
+        <li class="title">
+            <span>美团</span>
+            <ul class="son">
+                <li>送外卖</li>
+                <li>取外卖</li>
+                <li>跑腿</li>
+            </ul>
+        </li>
+        <li class="title">
+            <span>百度</span>
+            <ul class="son">
+                <li>无人车</li>
+                <li>搜索</li>
+                <li>无人管理</li>
+            </ul>
+        </li>
+</div>
+<script>
+    var title = document.getElementsByTagName('span');
+
+    for(var i = 0;i<title.length;i++){
+        title[i].index = i;
+        title[i].onclick = function(){
+            for(var j = 0;j<title.length;j++){
+                document.getElementsByClassName('son')[j].style.display="none";
+            }
+            this.parentNode.querySelector(".son").style.display="block";
+        }
+    }
+</script>
+</body>
+</html>

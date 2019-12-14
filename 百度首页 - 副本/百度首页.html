@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度图片</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+     .header{
+
+         overflow: hidden;
+         border-bottom: #f5f5f5 1px solid;
+         width: 100%;
+
+     }
+        ul{
+            list-style: none;
+            border-bottom: #f5f5f5 1px solid;
+        }
+        .nav li{
+            font-weight: 700;
+            font-family: 幼圆,serif;
+            float: right;
+            margin-right: 30px;
+            font-size: 13px;
+            display: block;
+            height: 24px;
+            line-height: 24px;
+        }
+        .search{
+            position: relative;
+            height: 400px;
+            /*text-align: center;*/
+        }
+        .search img{
+            position: absolute;
+            width: 270px;
+            height: 129px;
+            top:20px;
+            left: calc(50% - 135px);
+/*text-align: center;*/
+        }
+        input
+
+        {
+            position: absolute;
+            top: 169px;
+            left: calc(50% - 280px);
+            height: 20px;
+            padding: 9px 7px;
+        }
+        #last{
+            font-family: 宋体,serif;
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="">
+    <ul class="nav">
+        <li style="display: block;width: 66px;height: 24px;line-height:24px;background-color: #3388ff;color: white;margin: 0px;text-align: center;">更多产品</li>
+        <li>新闻</li>
+        <li>hao123</li>
+        <li>地图</li>
+        <li>视频</li>
+<!--        <li style="display: block;width: 66px;height: 30px;background-color: blue;color: white;margin: 0px;">更多产品</li>-->
+
+    </ul>
+</div>
+<div class="search">
+    <img src="pc_ede120f393776516980bdaa3dca88493.png">
+    <input type="text" style="width:480px;padding-left: 28px;border: 1px solid #3388ff;">
+    <input type="submit" style="margin-left:508px;height: 40px;width: 100px;background-color: #3388ff;color: white;border: 1px solid #3388ff;" value="百度一下" onclick="location.href='//www.baidu.com'" >
+</div>
+<div style="text-align: center;">
+    <p id="last">问题反馈请发邮箱:</p><a href="yanzezhong@outlook.com">yanzezhong@outlook.com</a>
+</div>
+
+</body>
+</html>

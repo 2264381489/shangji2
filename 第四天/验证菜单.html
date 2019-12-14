@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证菜单</title>
+</head>
+<body>
+<div>
+    <form>
+    <label for="username">username</label><input type="text" id="username"><br>
+        <label for="password">password</label><input type="text" id="password"><br>
+        <label for="idcard">idcard</label><input type="text" id="idcard"><br>
+        <label for="number">number</label><input type="text" id="number"><br>
+    </form>
+    <button id="check" value="检测">检测</button>
+</div>
+<script>
+    var oBtn=document.getElementById('check');
+    oBtn.onclick=function () {
+
+
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var idcard=document.getElementById('idcard').value;
+        var number=document.getElementById('number').value;
+        confirm("确认预订信息：\n"+"用户名："+ username +"\n密码："+password+"\nidcard :"+idcard+"\n购买数据 :"+number)
+    }
+</script>
+</body>
+</html>

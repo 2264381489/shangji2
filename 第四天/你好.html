@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>01</title>
+<!--    <link rel="stylesheet" type="text/css" href="./第四天01.css">-->
+    <style>
+        div{
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+<div class="float_adv" id="float">
+<script>
+    window.onload = function(){
+        var float1 = document.getElementById("float");
+        var x=0,y=0;
+        var xspeed = 30,yspeed =50;
+        var w=document.documentElement.clientWidth-100,h=document.documentElement.clientHeight-100;
+        function move(){
+            if(document.documentElement.clientWidth - float1.offsetWidth-10 < x || x < 0){
+                xspeed = -xspeed;
+            }
+
+            if(document.documentElement.clientHeight - float1.offsetHeight-10 < y || y < 0){
+                yspeed = -yspeed;
+            }
+            x = float1.offsetLeft + xspeed;
+            y = float1.offsetTop + yspeed;
+            float1.style.left = x + 'px';
+            float1.style.top = y + 'px';
+        }
+        var timer = setInterval(move, 100);
+    }
+
+</script>
+</body>
+</html>
